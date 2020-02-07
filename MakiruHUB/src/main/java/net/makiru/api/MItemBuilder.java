@@ -78,7 +78,7 @@ public class MItemBuilder {
         return this;
     }
 
-    public MItemBuilder setSkullOwner(String owner)
+    public MItemBuilder withSkullOwner(String owner)
     {
         try
         {

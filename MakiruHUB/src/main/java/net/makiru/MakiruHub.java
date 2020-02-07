@@ -1,5 +1,6 @@
 package net.makiru;
 
+import net.makiru.spigot.events.JoinListener;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -12,7 +13,7 @@ public class MakiruHub extends JavaPlugin {
         /**
          * Log MKLogger info starting
          */
-        registerListeners();
+        registerListeners(new JoinListener());
     }
 
     @Override
