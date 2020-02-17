@@ -1,5 +1,7 @@
 package net.makiru;
 
+import net.makiru.spigot.events.InventoryClickListener;
+import net.makiru.spigot.events.ItemClickListener;
 import net.makiru.spigot.events.JoinListener;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -13,7 +15,7 @@ public class MakiruHub extends JavaPlugin {
         /**
          * Log MKLogger info starting
          */
-        registerListeners(new JoinListener());
+        registerListeners(new JoinListener(), new ItemClickListener(), new InventoryClickListener());
     }
 
     @Override

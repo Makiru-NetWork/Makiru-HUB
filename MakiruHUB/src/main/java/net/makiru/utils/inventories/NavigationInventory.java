@@ -38,7 +38,8 @@ public class NavigationInventory {
         /**
          * @Tests: Not final visual | Test
          */
-
+        playerS.openInventory(inv.asInventory());
+        playerS.updateInventory();
         return inv;
     }
 

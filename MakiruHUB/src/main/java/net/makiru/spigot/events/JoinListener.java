@@ -10,7 +10,15 @@ public class JoinListener implements Listener {
 
     @EventHandler
     public void onPlayerJoinEvent(PlayerJoinEvent event){
+        event.setJoinMessage(null);
         Player player = event.getPlayer();
+        /**
+         *
+         * if(power > xGrade){
+         *      event.setJoinMessage("Grade pseudo a rejoint le hub");
+         * }
+         *
+         */
         new HubPlayer(player).setupLobbyPlayer();
     }
 }
