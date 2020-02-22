@@ -14,7 +14,7 @@ class Disable {
         }
 
         try {
-            System.out.println("Save MakiruBungeeCord logger.");
+            System.out.println("Save MakiruHub logger.");
             MakiruHub.getFactory().save();
             System.out.println("Waiting 1500ms");
             Thread.sleep(1500);

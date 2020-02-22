@@ -1,4 +1,4 @@
-package net.makiru.utils.inventories;
+package net.makiru.tools.inventories;
 
 import net.makiru.api.inventory.MInventory;
 import org.bukkit.entity.Player;

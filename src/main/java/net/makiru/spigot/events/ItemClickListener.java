@@ -1,8 +1,8 @@
 package net.makiru.spigot.events;
 
 import net.makiru.api.MItemBuilder;
-import net.makiru.utils.inventories.CosmeticsInventory;
-import net.makiru.utils.inventories.NavigationInventory;
+import net.makiru.tools.inventories.CosmeticsInventory;
+import net.makiru.tools.inventories.NavigationInventory;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;

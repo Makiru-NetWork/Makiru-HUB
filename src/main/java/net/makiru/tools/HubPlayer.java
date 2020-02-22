@@ -1,7 +1,7 @@
-package net.makiru.utils;
+package net.makiru.tools;
 
 import net.makiru.api.MItemBuilder;
-import net.makiru.utils.locations.Locations;
+import net.makiru.tools.locations.Locations;
 import org.bukkit.DyeColor;
 import org.bukkit.GameMode;
 import org.bukkit.Material;

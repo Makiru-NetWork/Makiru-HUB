@@ -1,4 +1,4 @@
-package net.makiru.utils.locations;
+package net.makiru.tools.locations;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;

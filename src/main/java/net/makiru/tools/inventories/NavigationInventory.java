@@ -1,11 +1,9 @@
-package net.makiru.utils.inventories;
+package net.makiru.tools.inventories;
 
 import net.makiru.api.MItemBuilder;
 import net.makiru.api.inventory.MInventory;
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
-import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.Arrays;

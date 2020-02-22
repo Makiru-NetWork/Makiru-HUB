@@ -44,8 +44,14 @@
         <dependency>
             <groupId>net.makiru</groupId>
             <artifactId>Makiru-API</artifactId>
-            <version>0.3.9</version>
+            <version>0.3.10</version>
             <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>net.makiru</groupId>
+            <artifactId>Makiru-Spigot-API</artifactId>
+            <version>0.2</version>
         </dependency>
     </dependencies>
 

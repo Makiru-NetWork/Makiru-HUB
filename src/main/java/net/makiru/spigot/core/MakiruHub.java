@@ -6,6 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class MakiruHub extends JavaPlugin {
 
+    public static String PREFIX = "§7[§c!§7] §8» ";
     private static MakiruHub instance;
     private static MKFactory factory;
 
