@@ -3,7 +3,7 @@
 [license]: https://img.shields.io/badge/License-Apache%202.0-lightgrey.svg
 [ ![javadoc][] ](https://javadoc.makiru.net)
 [ ![versioning][] ](http://semver.org/)
-[ ![license][] ](https://github.com/kanekireal/Makiru-Spigot-Hub/blob/master/LICENSE.md)
+[ ![license][] ](https://github.com/Makiru-NetWork/Makiru-Spigot-Hub/blob/master/LICENSE.md)
 
 # Makiru 
 
