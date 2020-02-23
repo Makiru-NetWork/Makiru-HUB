@@ -15,7 +15,7 @@ import java.util.Objects;
 public class SetupPlayer {
 
     public static class JoinEvent {
-        
+
         private final Scoreboard scoreboard;
 
         {
@@ -37,9 +37,7 @@ public class SetupPlayer {
             Objects.requireNonNull(this.scoreboard.getTeam(account.getRanks().getTabOrder())).addEntry(player.getName());
             player.setScoreboard(this.scoreboard);
             MakiruHub.getInstance().getServer().getOnlinePlayers().forEach(oPlayer -> oPlayer.setScoreboard(this.scoreboard));
-            player.sendMessage(
-                    ((String) L.WELCOME.get(account.getLanguage())).replace("{name}", player.getDisplayName())
-            );
+            Arrays.stream((String[]) L.WELCOME.get(account.getLanguage())).forEach(s -> player.sendMessage(s.replace("{name}", player.getDisplayName())));
             player.getInventory().setItem(0, Items.NAVIGATOR_TOOLBAR(account.getLanguage()).toItemStack());
             player.getInventory().setItem(1, Items.ODDS_AND_ENDS_TOOLBAR(account.getLanguage()).toItemStack());
             player.getInventory().setItem(4, Items.PROFIL_TOOLBAR(account.getLanguage()).setSkullOwningPlayer(player).toItemStack());
