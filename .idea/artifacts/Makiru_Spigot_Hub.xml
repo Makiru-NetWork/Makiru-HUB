@@ -18,7 +18,7 @@
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.10.1/jackson-databind-2.10.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/io/netty/netty-resolver-dns/4.1.45.Final/netty-resolver-dns-4.1.45.Final.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/makiru/Makiru-API/0.3.10/Makiru-API-0.3.10.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/makiru/Makiru-Spigot-API/0.3/Makiru-Spigot-API-0.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/makiru/Makiru-Spigot-API/0.5/Makiru-Spigot-API-0.5.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
