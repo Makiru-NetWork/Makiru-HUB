@@ -1,8 +1,8 @@
 package net.makiru.spigot.core;
 
 import net.makiru.api.redis.RedisManager;
-import net.makiru.spigot.events.InventoryClickListener;
-import net.makiru.spigot.events.ItemClickListener;
+import net.makiru.spigot.events.OnInventoryClickEvent;
+import net.makiru.spigot.events.OnPlayerInteractEvent;
 import net.makiru.spigot.events.OnPlayerJoinEvent;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.PluginManager;
@@ -17,7 +17,7 @@ class Enable {
             RedisManager.initAllConnections();
         } catch (Exception ignored) {
         }
-        this.registerListeners(makiruHub.getServer().getPluginManager(), makiruHub, new OnPlayerJoinEvent(), new ItemClickListener(), new InventoryClickListener());
+        this.registerListeners(makiruHub.getServer().getPluginManager(), makiruHub, new OnPlayerJoinEvent(), new OnPlayerInteractEvent(), new OnInventoryClickEvent());
     }
 
     private void registerListeners(@NotNull final PluginManager pluginManager, @NotNull final MakiruHub makiruHub, Listener... listeners) {
