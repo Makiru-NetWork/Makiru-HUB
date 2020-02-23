@@ -3,10 +3,11 @@ package net.makiru.spigot.core;
 import net.makiru.api.core.MakiruAPI;
 import net.makiru.api.logger.MKFactory;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.jetbrains.annotations.NotNull;
 
 public class MakiruHub extends JavaPlugin {
 
-    public static String PREFIX = "§7[§c!§7] §8» ";
+    public static final String PREFIX = "§7[§c!§7] §8» ";
     private static MakiruHub instance;
     private static MKFactory factory;
 
@@ -14,7 +15,7 @@ public class MakiruHub extends JavaPlugin {
         return factory;
     }
 
-    private void setFactory(MKFactory factory) {
+    private void setFactory(@NotNull final MKFactory factory) {
         MakiruHub.factory = factory;
     }
 
@@ -22,7 +23,7 @@ public class MakiruHub extends JavaPlugin {
         return MakiruHub.instance;
     }
 
-    private void setInstance(MakiruHub instance) {
+    private void setInstance(@NotNull final MakiruHub instance) {
         MakiruHub.instance = instance;
     }
 
