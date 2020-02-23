@@ -16,13 +16,14 @@ import org.bukkit.Sound;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.jetbrains.annotations.NotNull;
 
 public class OnPlayerJoinEvent implements Listener {
 
     private final MKLogger logger = MakiruHub.getFactory().getLogger(this.getClass().getPackage() + "." + this.getClass().getName());
 
     @EventHandler
-    public void onEvent(PlayerJoinEvent e) {
+    public void onEvent(@NotNull final PlayerJoinEvent e) {
         e.setJoinMessage(null);
         try {
             Account account = new AccountManager.Provider().get(UUIDFetcher.getUUID(e.getPlayer().getName()));
