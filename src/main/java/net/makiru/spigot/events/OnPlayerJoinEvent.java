@@ -5,6 +5,7 @@ import net.makiru.api.exceptions.AccountNotFoundException;
 import net.makiru.api.exceptions.RedisDownException;
 import net.makiru.api.exceptions.RedisException;
 import net.makiru.api.logger.MKLogger;
+import net.makiru.api.mojang.UUIDFetcher;
 import net.makiru.commons.Account;
 import net.makiru.commons.tools.Languages;
 import net.makiru.commons.tools.Ranks;
@@ -23,7 +24,7 @@ public class OnPlayerJoinEvent implements Listener {
     @EventHandler
     public void onEvent(PlayerJoinEvent e) {
         try {
-            Account account = new AccountManager.Provider().get(e.getPlayer().getUniqueId());
+            Account account = new AccountManager.Provider().get(UUIDFetcher.getUUID(e.getPlayer().getName()));
             new SetupPlayer.JoinEvent(e.getPlayer(), account);
             e.setJoinMessage(e.getPlayer().getDisplayName());
             if (account.getRanks().getPower() >= Ranks.HEROS.getPower())
@@ -34,7 +35,7 @@ public class OnPlayerJoinEvent implements Listener {
                 });
         } catch (AccountNotFoundException ex) {
             this.logger.error("onEvent(onPlayerJoinEvent)", ex);
-            e.getPlayer().sendMessage("\n" + MakiruHub.PREFIX + ((String)L.ACCOUNT_NOT_FOUND_EXCEPTION.get(Languages.FRENCH)).replace("{name}", e.getPlayer().getName()));
+            e.getPlayer().sendMessage("\n" + MakiruHub.PREFIX + ((String) L.ACCOUNT_NOT_FOUND_EXCEPTION.get(Languages.FRENCH)).replace("{name}", e.getPlayer().getName()));
         } catch (RedisException | RedisDownException ex) {
             this.logger.error("onEvent(onPlayerJoinEvent)", ex);
             e.getPlayer().sendMessage("\n" + MakiruHub.PREFIX + L.REDIS_EXCEPTION.get(Languages.FRENCH));
