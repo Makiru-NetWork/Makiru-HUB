@@ -1,4 +1,6 @@
+name: Makiru-Spigot-Hub
+description: Makiru-Spigot-Hub with API, events, commands
+version: 1.0.0
+authors: [LEVASSEUR Wesley, Foufou]
+website: https://makiru.net
 main: net.makiru.spigot.core.MakiruHub
-name: Makiru-HUB
-version: 0.0.1
-author: Foufou
