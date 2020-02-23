@@ -13,7 +13,7 @@ import java.util.Arrays;
 
 class Enable {
 
-    Enable(MakiruHub makiruHub) {
+    Enable(@NotNull final MakiruHub makiruHub) {
         try {
             RedisManager.initAllConnections();
         } catch (Exception ignored) {
