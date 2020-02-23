@@ -23,10 +23,10 @@ public class OnPlayerJoinEvent implements Listener {
 
     @EventHandler
     public void onEvent(PlayerJoinEvent e) {
+        e.setJoinMessage(null);
         try {
             Account account = new AccountManager.Provider().get(UUIDFetcher.getUUID(e.getPlayer().getName()));
             new SetupPlayer.JoinEvent(e.getPlayer(), account);
-            e.setJoinMessage(e.getPlayer().getDisplayName());
             if (account.getRanks().getPower() >= Ranks.HEROS.getPower())
                 MakiruHub.getInstance().getServer().getOnlinePlayers().forEach(player -> {
                     player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 3.0F, 0.533F);
