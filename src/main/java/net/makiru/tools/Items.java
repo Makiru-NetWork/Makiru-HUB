@@ -45,6 +45,7 @@ public class Items {
     public static ItemStack_B GRAY_DECORATION_GUI() {
         return new ItemStack_B(Material.GRAY_STAINED_GLASS_PANE).setDisplayName(" ");
     }
+
     public static ItemStack_B RED_DECORATION_GUI() {
         return new ItemStack_B(Material.RED_STAINED_GLASS_PANE).setDisplayName(" ");
     }
