@@ -4,3 +4,4 @@ version: 1.0.0
 authors: [LEVASSEUR Wesley, Foufou]
 website: https://makiru.net
 main: net.makiru.spigot.core.MakiruHub
+api-version: "1.13"
