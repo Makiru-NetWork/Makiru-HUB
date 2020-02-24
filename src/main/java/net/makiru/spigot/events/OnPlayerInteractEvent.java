@@ -21,19 +21,20 @@ public class OnPlayerInteractEvent implements Listener {
 
     private final MKLogger logger = MakiruHub.getFactory().getLogger(this.getClass().getPackage() + "." + this.getClass().getName());
 
+    @SuppressWarnings("deprecation")
     @EventHandler
     public void onEvent(@NotNull final PlayerInteractEvent e) {
         if (e.getAction().equals(Action.RIGHT_CLICK_AIR) || e.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
-            if (e.getPlayer().getItemInHand().getType().equals(Material.COMPASS)) {
-                try {
+            try {
+                if (e.getPlayer().getItemInHand().getType().equals(Material.COMPASS)) {
                     new NavigatorGUI(e.getPlayer(), new AccountManager.Provider().get(UUIDFetcher.getUUID(e.getPlayer().getName())));
-                } catch (AccountNotFoundException ex) {
-                    this.logger.error("onEvent(onPlayerInteractEvent)", ex);
-                    e.getPlayer().sendMessage("\n" + MakiruHub.PREFIX + ((String) L.ACCOUNT_NOT_FOUND_EXCEPTION.get(Languages.FRENCH)).replace("{name}", e.getPlayer().getName()));
-                } catch (RedisException | RedisDownException ex) {
-                    this.logger.error("onEvent(onPlayerInteractEvent)", ex);
-                    e.getPlayer().sendMessage("\n" + MakiruHub.PREFIX + L.REDIS_EXCEPTION.get(Languages.FRENCH));
                 }
+            } catch (AccountNotFoundException ex) {
+                this.logger.error("onEvent(onPlayerInteractEvent)", ex);
+                e.getPlayer().sendMessage("\n" + MakiruHub.PREFIX + ((String) L.ACCOUNT_NOT_FOUND_EXCEPTION.get(Languages.FRENCH)).replace("{name}", e.getPlayer().getName()));
+            } catch (RedisException | RedisDownException ex) {
+                this.logger.error("onEvent(onPlayerInteractEvent)", ex);
+                e.getPlayer().sendMessage("\n" + MakiruHub.PREFIX + L.REDIS_EXCEPTION.get(Languages.FRENCH));
             }
         }
        /* Player clicker = event.getPlayer();
