@@ -8,7 +8,8 @@ import org.jetbrains.annotations.NotNull;
 public class OnInventoryClickEvent implements Listener {
 
     @EventHandler
-    public void onEvent(@NotNull final InventoryClickEvent event) {
+    public void onEvent(@NotNull final InventoryClickEvent e) {
+
         //event.setCancelled(true);
     }
 }
