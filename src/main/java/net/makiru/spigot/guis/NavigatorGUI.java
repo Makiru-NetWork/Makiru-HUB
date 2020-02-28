@@ -2,6 +2,7 @@ package net.makiru.spigot.guis;
 
 import net.makiru.commons.Account;
 import net.makiru.spigot.builders.Inventory_B;
+import net.makiru.spigot.lang.L;
 import net.makiru.tools.Items;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
@@ -9,7 +10,7 @@ import org.jetbrains.annotations.NotNull;
 public class NavigatorGUI {
 
     public NavigatorGUI(@NotNull final Player player, @NotNull final Account account) {
-        player.openInventory(new Inventory_B(player, 9 * 6, "§7» §e§lNavigateur §7«")
+        player.openInventory(new Inventory_B(player, 9 * 6, (String) L.Hub.NAVIGATOR.get(account.getLanguage()))
                 .setItem(0, Items.HUB_NAVIGATOR_GUI().toItemStack())
                 .setItem(4, Items.HOST_NAVIGATOR_GUI().toItemStack())
                 .setItem(8, Items.INFO_NAVIGATOR_GUI().toItemStack())
