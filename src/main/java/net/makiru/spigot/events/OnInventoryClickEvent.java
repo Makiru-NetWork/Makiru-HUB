@@ -9,7 +9,6 @@ public class OnInventoryClickEvent implements Listener {
 
     @EventHandler
     public void onEvent(@NotNull final InventoryClickEvent e) {
-
         //event.setCancelled(true);
     }
 }
