@@ -13,32 +13,32 @@ public class Items {
 
     //TODO: TOOLBAR
     public static ItemStack_B NAVIGATOR(@NotNull final Languages language) {
-        return new ItemStack_B(Material.COMPASS).setDisplayName((String) L.NAVIGATOR.get(language)).setLore((String[]) L.NAVIGATOR_LORES.get(language));
+        return new ItemStack_B(Material.COMPASS).setDisplayName((String) L.Hub.NAVIGATOR.get(language)).setLore((String[]) L.Hub.NAVIGATOR_LORES.get(language));
     }
 
     public static ItemStack_B ODDS_AND_ENDS(@NotNull final Languages language) {
-        return new ItemStack_B(Material.ENDER_CHEST).setDisplayName((String) L.ODDS_AND_ENDS.get(language)).setLore((String[]) L.ODDS_AND_ENDS_LORES.get(language));
+        return new ItemStack_B(Material.ENDER_CHEST).setDisplayName((String) L.Hub.ODDS_AND_ENDS.get(language)).setLore((String[]) L.Hub.ODDS_AND_ENDS_LORES.get(language));
     }
 
     public static ItemStack_B PROFIL(@NotNull final Languages language, @NotNull final Player player) {
-        return new ItemStack_B(Material.PLAYER_HEAD).setDisplayName((String) L.PROFIL.get(language)).setLore((String[]) L.PROFIL_LORES.get(language)).setSkullOwningPlayer(player);
+        return new ItemStack_B(Material.PLAYER_HEAD).setDisplayName((String) L.Hub.PROFIL.get(language)).setLore((String[]) L.Hub.PROFIL_LORES.get(language)).setSkullOwningPlayer(player);
     }
 
     public static ItemStack_B SHOP(@NotNull final Languages language) {
-        return new ItemStack_B(Material.EMERALD).setDisplayName((String) L.SHOP.get(language)).setLore((String[]) L.SHOP_LORES.get(language));
+        return new ItemStack_B(Material.EMERALD).setDisplayName((String) L.Hub.SHOP.get(language)).setLore((String[]) L.Hub.SHOP_LORES.get(language));
     }
 
     public static ItemStack_B SETTINGS(@NotNull final Languages language) {
-        return new ItemStack_B(Material.COMPARATOR).setDisplayName((String) L.SETTINGS.get(language)).setLore((String[]) L.SETTINGS_LORES.get(language));
+        return new ItemStack_B(Material.COMPARATOR).setDisplayName((String) L.Hub.SETTINGS.get(language)).setLore((String[]) L.Hub.SETTINGS_LORES.get(language));
     }
 
     //TODO: GUI
-    public static ItemStack_B CLOSE_GUI() {
-        return new ItemStack_B(Material.DARK_OAK_DOOR).setDisplayName("§7» §c§lFermer");
+    public static ItemStack_B CLOSE_GUI(@NotNull final Languages language) {
+        return new ItemStack_B(Material.DARK_OAK_DOOR).setDisplayName((String) L.Hub.CLOSE.get(language));
     }
 
-    public static ItemStack_B BACK_GUI() {
-        return new ItemStack_B(Material.ARROW).setDisplayName("§7» §c§lRetour");
+    public static ItemStack_B BACK_GUI(@NotNull final Languages language) {
+        return new ItemStack_B(Material.ARROW).setDisplayName((String)L.Hub.BLACK.get(language));
     }
 
     //TODO: DECORATION_GUI
@@ -84,11 +84,11 @@ public class Items {
     }
 
     public static ItemStack_B CLUEDO_NAVIGATOR_GUI(@NotNull final Languages language) {
-        return new ItemStack_B(Material.DRIED_KELP).setDisplayName("§7§lCluedo").setLore(" ", "§aI§bn§cé§dd§ei§ft", " ");
+        return new ItemStack_B(Material.DRIED_KELP).setDisplayName("§b§lCluedo").setLore((String)L.Hub.CLUEDO_LORES.get(language));
     }
 
     public static ItemStack_B WEREWOLF_NAVIGATOR_GUI(@NotNull final Languages language) {
-        return new ItemStack_B(Material.COOKED_RABBIT).setDisplayName("§7§lLoup-Garou").setLore(" ", "§aI§bn§cé§dd§ei§ft", " ");
+        return new ItemStack_B(Material.COOKED_RABBIT).setDisplayName("§c§lWerewolf").setLore((String) L.Hub.WEREWOLF_LORES.get(language));
     }
 
     public static ItemStack_B DEATHNOTE_NAVIGATOR_GUI(@NotNull final Languages language) {
@@ -96,24 +96,26 @@ public class Items {
     }
 
     public static ItemStack_B MONOPOLY_NAVIGATOR_GUI(@NotNull final Languages language) {
-        return new ItemStack_B(Material.TOTEM_OF_UNDYING).setDisplayName("§7§lMonopoly").setLore(" ", "§aI§bn§cé§dd§ei§ft", " ", "§cSoon...");
+        return new ItemStack_B(Material.TOTEM_OF_UNDYING).setDisplayName("§e§lMonopoly").setLore((String)L.Hub.MONOPOLY_LORES.get(language));
     }
 
     public static ItemStack_B MURDER_NAVIGATOR_GUI(@NotNull final Languages language) {
-        return new ItemStack_B(Material.IRON_SWORD).setDisplayName("§7§lMurder").setLore(" ", "§aI§bn§cé§dd§ei§ft", " ");
+        return new ItemStack_B(Material.IRON_SWORD).setDisplayName("§7§lMurder").setLore((String) L.Hub.MURDER_LORES.get(language));
     }
 
     public static ItemStack_B TNTRUN_NAVIGATOR_GUI(@NotNull final Languages language) {
-        return new ItemStack_B(Material.TNT).setDisplayName("§7§lTNTRun").setLore(" ", "§dRéedition", " ");
+        return new ItemStack_B(Material.TNT).setDisplayName("§7§lTNTRun").setLore((String)L.Hub.FASTGAME_REISSUE_LORES.get(language));
     }
 
     public static ItemStack_B SPLEEF_NAVIGATOR_GUI(@NotNull final Languages language) {
-        return new ItemStack_B(Material.GOLDEN_SHOVEL).setDisplayName("§7§lSpleef").setLore(" ", "§dRéedition", " ");
+        return new ItemStack_B(Material.GOLDEN_SHOVEL).setDisplayName("§7§lSpleef").setLore((String)L.Hub.FASTGAME_REISSUE_LORES.get(language));
     }
 
     public static ItemStack_B THIMBLE_NAVIGATOR_GUI(@NotNull final Languages language) {
-        return new ItemStack_B(Material.QUARTZ_BLOCK).setDisplayName("§7§lDé À Coudre").setLore(" ", "§dRéedition", " ");
+        return new ItemStack_B(Material.QUARTZ_BLOCK).setDisplayName("§7§lThimble (DAC)").setLore((String)L.Hub.FASTGAME_REISSUE_LORES.get(language));
     }
+
+
 
 
     // public static ItemStack_B
