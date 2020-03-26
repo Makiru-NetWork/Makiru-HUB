@@ -12,7 +12,7 @@ public class DeathNoteGUI {
     public DeathNoteGUI(@NotNull final Player player, @NotNull final Account account) {
         player.openInventory(new Inventory_B(player, 9 * 6, (String) L.Hub.NAVIGATOR.get(account.getLanguage()))
                 .setItem(0, Items.HUB_NAVIGATOR_GUI().toItemStack())
-                .setItem(4, Items.HOST_NAVIGATOR_GUI().toItemStack())
+                .setItem(4, Items.HOST().toItemStack())
                 .setItem(8, Items.INFO_NAVIGATOR_GUI().toItemStack())
                 .setItem(45, Items.JUMP_NAVIGATOR_GUI().toItemStack())
                 .setItem(46, Items.ODDS_AND_ENDS_NAVIGATOR_GUI(account.getLanguage()).toItemStack())
