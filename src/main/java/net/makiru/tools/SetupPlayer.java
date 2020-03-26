@@ -31,8 +31,6 @@ public class SetupPlayer {
             player.getInventory().clear();
             player.teleport(Locations.HUB.getLocation());
             player.setDisplayName(account.getRanks().getPrefix() + player.getName());
-            player.setCustomName(account.getRanks().getPrefix() + player.getName());
-            player.setCustomNameVisible(true);
             player.setPlayerListName(account.getRanks().getPrefix() + player.getName());
             Objects.requireNonNull(this.scoreboard.getTeam(account.getRanks().getTabOrder())).addEntry(player.getName());
             player.setScoreboard(this.scoreboard);
