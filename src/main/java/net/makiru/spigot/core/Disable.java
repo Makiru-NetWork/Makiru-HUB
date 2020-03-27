@@ -1,6 +1,6 @@
 package net.makiru.spigot.core;
 
-import net.makiru.api.core.MakiruAPI;
+import net.makiru.api.logger.MKFactory;
 import net.makiru.api.redis.RedisManager;
 
 import java.io.IOException;
@@ -14,13 +14,8 @@ class Disable {
         }
 
         try {
-            System.out.println("Save MakiruHub logger.");
-            MakiruHub.getFactory().save();
-            System.out.println("Waiting 1500ms");
-            Thread.sleep(1500);
-            System.out.println("Save MakiruAPI logger.");
-            MakiruAPI.getFactory().save();
-        } catch (IOException | InterruptedException e) {
+            MakiruSpigotHub.getFactory().save(MKFactory.getLogs());
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
