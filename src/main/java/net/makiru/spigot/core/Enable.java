@@ -13,15 +13,15 @@ import java.util.Arrays;
 
 class Enable {
 
-    Enable(@NotNull final MakiruHub makiruHub) {
+    Enable(@NotNull final MakiruSpigotHub makiruSpigotHub) {
         try {
             RedisManager.initAllConnections();
         } catch (Exception ignored) {
         }
-        this.registerListeners(makiruHub.getServer().getPluginManager(), makiruHub, new OnPlayerJoinEvent(), new OnPlayerInteractEvent(), new OnInventoryClickEvent(), new OnAsyncPlayerChatEvent());
+        this.registerListeners(makiruSpigotHub.getServer().getPluginManager(), makiruSpigotHub, new OnPlayerJoinEvent(), new OnPlayerInteractEvent(), new OnInventoryClickEvent(), new OnAsyncPlayerChatEvent());
     }
 
-    private void registerListeners(@NotNull final PluginManager pluginManager, @NotNull final MakiruHub makiruHub, Listener... listeners) {
-        Arrays.stream(listeners).forEach(listener -> pluginManager.registerEvents(listener, makiruHub));
+    private void registerListeners(@NotNull final PluginManager pluginManager, @NotNull final MakiruSpigotHub makiruSpigotHub, Listener... listeners) {
+        Arrays.stream(listeners).forEach(listener -> pluginManager.registerEvents(listener, makiruSpigotHub));
     }
 }
