@@ -5,10 +5,10 @@ import net.makiru.api.logger.MKFactory;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
-public class MakiruHub extends JavaPlugin {
+public class MakiruSpigotHub extends JavaPlugin {
 
     public static final String PREFIX = "§7[§c!§7] §8» ";
-    private static MakiruHub instance;
+    private static MakiruSpigotHub instance;
     private static MKFactory factory;
 
     public static MKFactory getFactory() {
@@ -16,20 +16,20 @@ public class MakiruHub extends JavaPlugin {
     }
 
     private void setFactory(@NotNull final MKFactory factory) {
-        MakiruHub.factory = factory;
+        MakiruSpigotHub.factory = factory;
     }
 
-    public static MakiruHub getInstance() {
-        return MakiruHub.instance;
+    public static MakiruSpigotHub getInstance() {
+        return MakiruSpigotHub.instance;
     }
 
-    private void setInstance(@NotNull final MakiruHub instance) {
-        MakiruHub.instance = instance;
+    private void setInstance(@NotNull final MakiruSpigotHub instance) {
+        MakiruSpigotHub.instance = instance;
     }
 
     @Override
     public void onLoad() {
-        new Load();
+        new Load(this);
         super.onLoad();
     }
 

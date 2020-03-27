@@ -3,5 +3,5 @@ description: Makiru-Spigot-Hub with API, events, commands
 version: 1.0.0
 authors: [LEVASSEUR Wesley, Foufou]
 website: https://makiru.net
-main: net.makiru.spigot.core.MakiruHub
+main: net.makiru.spigot.core.MakiruSpigotHub
 api-version: "1.13"
