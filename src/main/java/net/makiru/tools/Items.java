@@ -1,8 +1,8 @@
 package net.makiru.tools;
 
 import net.makiru.commons.tools.Languages;
-import net.makiru.spigot.builders.ItemStack_B;
-import net.makiru.spigot.lang.L;
+import net.makiru.spigot.api.builders.ItemStack_B;
+import net.makiru.spigot.api.tools.L;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
@@ -36,7 +36,7 @@ public class Items {
     }
 
     public static ItemStack_B BACK_GUI(@NotNull final Languages language) {
-        return new ItemStack_B(Material.ARROW).setDisplayName((String) L.Hub.BLACK.get(language));
+        return new ItemStack_B(Material.ARROW).setDisplayName((String) L.Hub.BACK.get(language));
     }
 
     //TODO: DECORATION_GUI
@@ -116,33 +116,33 @@ public class Items {
     }
 
     public static ItemStack_B RANKS_GUI(@NotNull final Languages language) {
-        return new ItemStack_B(Material.WOLF_SPAWN_EGG).setDisplayName("§7§lRanks").setLore((String) L.Hub.RANKS_LORES.get(language)); //TODO: Make LORES
+        return new ItemStack_B(Material.WOLF_SPAWN_EGG).setDisplayName("§7§lRanks"); //TODO: Make LORES
     }
 
     public static ItemStack_B PETS_GUI(@NotNull final Languages language) {
-        return new ItemStack_B(Material.WOLF_SPAWN_EGG).setDisplayName("§7§lPets").setLore((String) L.Hub.PETS_LORES.get(language)); //TODO: Make LORES
+        return new ItemStack_B(Material.WOLF_SPAWN_EGG).setDisplayName("§7§lPets"); //TODO: Make LORES
     }
 
     public static ItemStack_B BOOSTERS_GUI(@NotNull final Languages language) {
-        return new ItemStack_B(Material.EXPERIENCE_BOTTLE).setDisplayName("§7§lBoosters").setLore((String) L.Hub.BOOSTERS_LORES.get(language)); //TODO: Make LORES
+        return new ItemStack_B(Material.EXPERIENCE_BOTTLE).setDisplayName("§7§lBoosters"); //TODO: Make LORES
     }
 
     public static ItemStack_B PARTICLES_GUI(@NotNull final Languages language) {
-        return new ItemStack_B(Material.BLAZE_POWDER).setDisplayName("§7§lParticles").setLore((String) L.Hub.PARTICLES_LORES.get(language)); //TODO: Make LORES
+        return new ItemStack_B(Material.BLAZE_POWDER).setDisplayName("§7§lParticles"); //TODO: Make LORES
     }
 
    /* public static ItemStack_B GADGETS_GUI(@NotNull final Languages language) {
         return new ItemStack_B(Material.BLAZE_POWDER).setDisplayName("§7§lGadgets").setLore((String)L.Hub.GADGETS_LORES.get(language));
     }*/
 
-   @SuppressWarnings("deprecation")
+    @SuppressWarnings("deprecation")
     public static ItemStack_B SETTINGS_OFF_GUI(@NotNull final Languages language) {
-        return new ItemStack_B(Material.LEGACY_REDSTONE_TORCH_OFF).setDisplayName("§7§lOFF").setLore((String) L.Hub.OFF_LORES.get(language)); //TODO: Make LORES
+        return new ItemStack_B(Material.LEGACY_REDSTONE_TORCH_OFF).setDisplayName("§7§lOFF"); //TODO: Make LORES
     }
 
     @SuppressWarnings("deprecation")
     public static ItemStack_B SETTINGS_ON_GUI(@NotNull final Languages language) {
-        return new ItemStack_B(Material.LEGACY_REDSTONE_TORCH_ON).setDisplayName("§7§lON").setLore((String) L.Hub.ON_LORES.get(language)); //TODO: Make LORES
+        return new ItemStack_B(Material.LEGACY_REDSTONE_TORCH_ON).setDisplayName("§7§lON"); //TODO: Make LORES
     }
 
 
