@@ -1,8 +1,8 @@
 package net.makiru.spigot.guis.navigators;
 
 import net.makiru.commons.Account;
-import net.makiru.spigot.builders.Inventory_B;
-import net.makiru.spigot.lang.L;
+import net.makiru.spigot.api.builders.Inventory_B;
+import net.makiru.spigot.api.tools.L;
 import net.makiru.tools.Items;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
@@ -15,10 +15,10 @@ public class DeathNoteGUI {
                 .setItem(4, Items.HOST().toItemStack())
                 .setItem(8, Items.INFO_NAVIGATOR_GUI().toItemStack())
                 .setItem(45, Items.JUMP_NAVIGATOR_GUI().toItemStack())
-                .setItem(46, Items.ODDS_AND_ENDS_NAVIGATOR_GUI(account.getLanguage()).toItemStack())
-                .setItem(49, Items.PROFIL_NAVIGATOR_GUI(account.getLanguage(), player).toItemStack())
-                .setItem(52, Items.SHOP_NAVIGATOR_GUI(account.getLanguage()).toItemStack())
-                .setItem(53, Items.SETTINGS_NAVIGATOR_GUI(account.getLanguage()).toItemStack())
+                .setItem(46, Items.ODDS_AND_ENDS(account.getLanguage()).toItemStack())
+                .setItem(49, Items.PROFIL(account.getLanguage(), player).toItemStack())
+                .setItem(52, Items.SHOP(account.getLanguage()).toItemStack())
+                .setItem(53, Items.SETTINGS(account.getLanguage()).toItemStack())
                 /*
                 .setItem(20, Items.CLUEDO_NAVIGATOR_GUI(account.getLanguage()).toItemStack())
                 .setItem(21, Items.WEREWOLF_NAVIGATOR_GUI(account.getLanguage()).toItemStack())
