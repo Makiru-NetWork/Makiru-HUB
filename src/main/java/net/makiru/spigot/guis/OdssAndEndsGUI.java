@@ -1,8 +1,8 @@
 package net.makiru.spigot.guis;
 
 import net.makiru.commons.Account;
-import net.makiru.spigot.builders.Inventory_B;
-import net.makiru.spigot.lang.L;
+import net.makiru.spigot.api.builders.Inventory_B;
+import net.makiru.spigot.api.tools.L;
 import net.makiru.tools.Items;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
