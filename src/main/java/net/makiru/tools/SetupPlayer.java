@@ -2,8 +2,8 @@ package net.makiru.tools;
 
 import net.makiru.commons.Account;
 import net.makiru.commons.tools.Ranks;
-import net.makiru.spigot.core.MakiruHub;
-import net.makiru.spigot.lang.L;
+import net.makiru.spigot.api.tools.L;
+import net.makiru.spigot.core.MakiruSpigotHub;
 import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.Scoreboard;
@@ -19,8 +19,8 @@ public class SetupPlayer {
         private final Scoreboard scoreboard;
 
         {
-            this.scoreboard = Objects.requireNonNull(MakiruHub.getInstance().getServer().getScoreboardManager()).getNewScoreboard();
-            Arrays.stream(Ranks.values()).forEach(rank -> this.scoreboard.registerNewTeam(rank.getTabOrder()).setPrefix(rank.getPrefix()));
+            this.scoreboard = Objects.requireNonNull(MakiruSpigotHub.getInstance().getServer().getScoreboardManager()).getNewScoreboard();
+            Arrays.stream(Ranks.values()).forEach(rank -> this.scoreboard.registerNewTeam(rank.getTabOrder()));
         }
 
         public JoinEvent(@NotNull final Player player, @NotNull final Account account) {
@@ -30,11 +30,11 @@ public class SetupPlayer {
             player.setFoodLevel(20);
             player.getInventory().clear();
             player.teleport(Locations.HUB.getLocation());
-            player.setDisplayName(account.getRanks().getPrefix() + player.getName());
-            player.setPlayerListName(account.getRanks().getPrefix() + player.getName());
-            Objects.requireNonNull(this.scoreboard.getTeam(account.getRanks().getTabOrder())).addEntry(player.getName());
+            player.setDisplayName(account.getRank().getRanks().getPrefix(account.getLanguage()) + player.getName());
+            player.setPlayerListName(account.getRank().getRanks().getPrefix(account.getLanguage()) + player.getName());
+            Objects.requireNonNull(this.scoreboard.getTeam(account.getRank().getRanks().getTabOrder())).addEntry(player.getName());
             player.setScoreboard(this.scoreboard);
-            MakiruHub.getInstance().getServer().getOnlinePlayers().forEach(oPlayer -> oPlayer.setScoreboard(this.scoreboard));
+            MakiruSpigotHub.getInstance().getServer().getOnlinePlayers().forEach(oPlayer -> oPlayer.setScoreboard(this.scoreboard));
             Arrays.stream(((String[]) L.Hub.WELCOME.get(account.getLanguage()))).forEach(s -> player.sendMessage(s.replace("{name}", player.getDisplayName())));
             player.getInventory().setItem(0, Items.NAVIGATOR(account.getLanguage()).toItemStack());
             player.getInventory().setItem(1, Items.ODDS_AND_ENDS(account.getLanguage()).toItemStack());
